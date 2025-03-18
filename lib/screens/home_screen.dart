@@ -20,9 +20,16 @@ class HomeScreen extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.white),
+            onPressed: () {
+              // aqui vai a lógica para adicionar uma nova tarefa
+            },
+          ),
+        ],
       ),
       body: const Center(
         child: Text('Bem-vindo ao Gerenciador de Tarefas!'),
