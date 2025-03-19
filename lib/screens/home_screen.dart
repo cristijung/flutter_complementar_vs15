@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bem Vindo ao App'),
+        title: const Text('Bem Vindo ao AppTask'),
         titleTextStyle: const TextStyle(
           color: Colors.white,
           fontSize: 20,
@@ -64,13 +64,44 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
+//classe visual e interativa para usuário
 class HomeScreenContent extends StatelessWidget {
   const HomeScreenContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Bem-vindo ao Gerenciador de Tarefas!'),
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        Image.asset(
+          'assets/home_img.jpeg',
+          fit: BoxFit.cover,
+        ),
+        Center(
+          child: Padding(padding: const EdgeInsets.only(left: 20.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Bem vindo ao',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text('AppTask',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 78,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
