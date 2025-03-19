@@ -25,41 +25,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MainScreen extends StatefulWidget { //o Widget com estado para controlar a navegação
-  const MainScreen({super.key});
 
-  @override
-  _MainScreenState createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0; // índice da tela atualmente selecionada
-
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    ApiScreen(),
-    InitialScreen(),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex), // exibe a tela selecionada
-      ),
-      bottomNavigationBar: CustomNavigationBar( //exibe a barra de navegação
-        selectedIndex: _selectedIndex,
-        onItemTapped: _onItemTapped,
-      ),
-    );
-  }
-}
 
 
 
