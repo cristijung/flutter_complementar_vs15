@@ -29,11 +29,11 @@ class CustomNavigationBar extends StatelessWidget {
             label: '',
           ),
           NavigationDestination(
-            icon: Icon(Icons.image, color: Colors.white),
+            icon: Icon(Icons.task, color: Colors.white),
             label: '',
           ),
           NavigationDestination(
-            icon: Icon(Icons.task, color: Colors.white),
+            icon: Icon(Icons.image, color: Colors.white),
             label: '',
           ),
         ],

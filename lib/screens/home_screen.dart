@@ -15,8 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreenContent(),
-    ApiScreen(),
     InitialScreen(),
+    ApiScreen(),
   ];
 
   void _onItemTapped(int index) {
